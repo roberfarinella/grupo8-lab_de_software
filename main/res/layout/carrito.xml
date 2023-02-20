@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarritoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/headerCarrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Carrito"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:background="@color/yellow"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+             android:id="@+id/descripcionTitulo"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+             android:text="Producto"
+            android:textSize="20dp"
+            android:layout_below="@+id/headerCarrito"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/descripcionCantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Cantidad"
+            android:textSize="20dp"
+            android:layout_below="@+id/headerCarrito"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/descripcionPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textSize="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/headerCarrito"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"/>
+
+        <ListView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/carritoView"
+            android:layout_below="@+id/descripcionTitulo"
+            android:background="@color/grey"
+            />
+        <TextView
+            android:id="@+id/totalCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/carritoView"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <CheckBox
+            android:id="@+id/seleccionEfectivo"
+            android:layout_below="@+id/totalCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Efectivo" />
+
+        <CheckBox
+            android:id="@+id/seleccionTarjeta"
+            android:layout_below="@+id/seleccionEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Tarjeta" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textoDomicilioONodos"
+            android:layout_below="@+id/seleccionTarjeta"
+            android:text="¿Desea envio a domicilio o retirar en algun nodo?"
+            android:textSize="15dp"/>
+        <Spinner
+            android:id="@+id/nodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textoDomicilioONodos"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/btn_dropdown"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/finalizarCompra"
+            android:layout_below="@+id/nodos"
+            android:layout_marginRight="50dp"
+            android:text="Finalizar Compra "
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:background="@color/yellow"
+            android:onClick="verCheckBox"
+            />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

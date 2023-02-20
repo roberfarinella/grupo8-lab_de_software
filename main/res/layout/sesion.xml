@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/headerSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Iniciar Sesión"
+            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:background="@color/yellow"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerSesion"
+            android:gravity="center"
+            android:text="Usuario"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"/>
+
+         <EditText
+             android:id="@+id/ingresarNombre"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/nombreUsuario"
+             android:hint="Ingrese el mail de usuario"
+             android:imeOptions="actionSearch"
+             android:background="@color/white"
+             android:inputType="text"
+             android:gravity="center"
+        />
+
+        <TextView
+            android:id="@+id/contraseña"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ingresarNombre"
+            android:gravity="center"
+            android:text="Contraseña"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/ingresarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contraseña"
+            android:hint="Ingrese su contraseña"
+            android:imeOptions="actionSearch"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:gravity="center"
+            android:inputType="textPassword"
+            />
+
+
+        <Button
+            android:id="@+id/iniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contraseña"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="80dp"
+            android:background="@color/yellow"
+            android:textColor="@color/white"
+            android:text="Ingresar"
+            android:onClick="logIn"/>
+
+        <Button
+            android:id="@+id/cancelarInicioSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contraseña"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="80dp"
+            android:background="@color/grey"
+            android:text=" Cancelar"
+            android:textColor="@color/black"
+            android:onClick="cancelarInicioSesion"/>
+
+
+        <TextView
+            android:id="@+id/noRegistrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iniciarSesion"
+            android:text="¿Aún no te registraste?"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/registrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/noRegistrado"
+            android:layout_alignBaseline="@+id/noRegistrado"
+            android:layout_marginLeft="5dp"
+            android:text="Registrate"
+            android:textColor="@color/yellow"
+            android:textSize="12dp"
+            android:onClick="registrarse"
+            />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

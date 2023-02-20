@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfiguracionPago">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="39dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/headerPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Detalle de pago"
+            android:textSize="35dp"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/numTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerPago"
+            android:text="Número de tarjeta: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresarNumTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerPago"
+            android:layout_toRightOf="@id/numTarjeta"
+            android:layout_alignBaseline="@id/numTarjeta"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese el número de su tarjeta *"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:maxLength="16"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/nombreTitular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numTarjeta"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Titular : "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresarNombreTitular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerPago"
+            android:layout_toRightOf="@id/nombreTitular"
+            android:layout_alignBaseline="@id/nombreTitular"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+
+            android:hint="Ingrese el nombre del titular de la tarjeta *"
+            android:imeOptions="actionSearch"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/códigoDeSeguridad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombreTitular"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Código de seguridad : "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresarCódigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/códigoDeSeguridad"
+            android:layout_alignBaseline="@id/códigoDeSeguridad"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese el código de seguridad *"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/fechaVencimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/códigoDeSeguridad"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Fecha de vencimiento: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresarFechaVencimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fechaVencimiento"
+            android:layout_alignBaseline="@id/fechaVencimiento"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese la fecha de vencimiento *"
+            android:imeOptions="actionSearch"
+            android:inputType="date"
+            android:maxLength="8"
+            android:textSize="12dp" />
+
+
+        <Button
+            android:id="@+id/registrarPersona"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fechaVencimiento"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:onClick="compraFinalizada"
+            android:text=" Finalizar compra" />
+
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

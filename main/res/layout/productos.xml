@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/vistaProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/headerProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Productos"
+            android:background="@color/green"
+            android:textSize="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/barraDeBusqueda"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/headerProducto"
+            android:hint="Ingrese nombre del producto"
+            android:imeOptions="actionSearch"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:onClick="buscarPorTitulo"
+            android:layout_marginLeft="10dp"
+            android:inputType="text"
+            />
+
+        <Spinner
+            android:id="@+id/categoriasASeleccionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/barraDeBusqueda"
+            android:layout_marginBottom="12dp"
+            android:background="@android:drawable/btn_dropdown"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerProducto"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_search"
+            android:onClick="buscarPorTitulo"
+            android:backgroundTint="@color/white"
+            />
+
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview"
+            android:layout_below="@+id/categoriasASeleccionar"
+            android:background="@color/white"
+            
+            />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

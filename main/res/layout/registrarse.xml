@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/headerRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:background="@color/green"
+            android:gravity="center"
+            android:text="Registrarse"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+
+        <TextView
+            android:id="@+id/emailUsu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerRegistro"
+            android:text="Email: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresarEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerRegistro"
+            android:layout_toRightOf="@id/emailUsu"
+            android:layout_alignBaseline="@id/emailUsu"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su email *"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/contraseñaUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emailUsu"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Contraseña : "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresarContra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/contraseñaUser"
+            android:layout_alignBaseline="@id/contraseñaUser"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su contraseña *"
+            android:imeOptions="actionSearch"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/contraseñaUserConfirmar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contraseñaUser"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Confirmar contraseña : "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresarContraNuevamente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/contraseñaUserConfirmar"
+            android:layout_alignBaseline="@id/contraseñaUserConfirmar"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su contraseña nuevamente *"
+            android:imeOptions="actionSearch"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/nombrePersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contraseñaUserConfirmar"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Nombre: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresaNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/nombrePersona"
+            android:layout_alignBaseline="@id/nombrePersona"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su nombre *"
+            android:imeOptions="actionSearch"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/apellidoPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombrePersona"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Apellido: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresaApellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/apellidoPersona"
+            android:layout_alignBaseline="@id/apellidoPersona"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su apellido *"
+            android:imeOptions="actionSearch"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textSize="12dp" />
+        <TextView
+            android:id="@+id/edadPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apellidoPersona"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Edad: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresaEdad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/edadPersona"
+            android:layout_alignBaseline="@id/edadPersona"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su edad *"
+            android:imeOptions="actionSearch"
+            android:inputType="number"
+            android:maxLength="20"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/teléfonoPersona"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edadPersona"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Teléfono: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresaTeléfono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/teléfonoPersona"
+            android:layout_alignBaseline="@id/teléfonoPersona"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su teléfono *"
+            android:imeOptions="actionSearch"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/calle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/teléfonoPersona"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Calle: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresaCalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/calle"
+            android:layout_alignBaseline="@id/calle"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su calle *"
+            android:imeOptions="actionSearch"
+            android:maxLength="20"
+            android:inputType="text"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calle"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Número: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresaNumero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/numero"
+            android:layout_alignBaseline="@id/numero"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su número de propiedad*"
+            android:imeOptions="actionSearch"
+            android:maxLength="10"
+            android:inputType="number"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/piso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/numero"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Piso: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/ingresaPiso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/piso"
+            android:layout_alignBaseline="@id/piso"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su piso"
+            android:imeOptions="actionSearch"
+            android:maxLength="5"
+            android:inputType="text"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/departamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/piso"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Departamento: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresaDepartamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/departamento"
+            android:layout_alignBaseline="@id/departamento"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese su departamento"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLength="10"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/infoAdicional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departamento"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="0dp"
+            android:text="Información adicional: "
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+        <EditText
+            android:id="@+id/ingresaInfoAdicional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/infoAdicional"
+            android:layout_alignBaseline="@id/infoAdicional"
+            android:background="@color/white"
+            android:drawableBottom="@color/green"
+            android:hint="Ingrese información adicional del domicilio"
+            android:imeOptions="actionSearch"
+            android:maxLength="30"
+            android:inputType="text"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/registrarPersona"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoAdicional"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/green"
+            android:textColor="@color/white"
+            android:onClick="registrarUsuario"
+            android:text=" Registrarse" />
+
+        <Button
+            android:id="@+id/cancelarOperacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/infoAdicional"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/grey"
+            android:text=" Cancelar"
+            android:textColor="@color/black"
+            android:onClick="cancelarRegistro"/>
+
+        <TextView
+            android:id="@+id/iniciarSesionRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesion"
+            android:layout_below="@+id/cancelarOperacion"
+            android:layout_toRightOf="@+id/textoDeInicioSesionRegistro"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/green"
+            android:onClick="iniciarSesionDesdeRegistro"
+            />
+        <TextView
+            android:id="@+id/textoDeInicioSesionRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Ya eres un usuario registrado? "
+            android:layout_below="@+id/cancelarOperacion"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
